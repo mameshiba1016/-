@@ -1,17 +1,7 @@
-﻿#include "Saber.h"
-#include "Archer.h"
-#include "Rider.h"
+﻿#include "BattleDemo.h"
 
+// 課題の進行は専用クラス・関数へ任せ、入口の処理を最小限にする。
 int main()
 {
-    Saber saber;
-    Archer archer;
-    Rider rider;
-    Servant* servants[] = { &saber, &archer, &rider };
-    for (Servant* servant : servants)
-    {
-        servant->ShowProfile();
-        servant->Attack();
-    }
-    return 0;
+    return RunBattleDemo();
 }
